@@ -1,0 +1,372 @@
+/*Master styles*/
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(25%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+body {
+    margin-right: 20%;
+    margin-left: 20%;
+    font-family: "Nunito", sans-serif;
+}
+
+/*Nav styles*/
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 48px;
+    padding-bottom: 64px;
+}
+
+.right-side {
+    display: flex; 
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-wrapper > .right-side > div {
+    margin-left: 24px; 
+    font-size: 0.9em;
+    text-transform: uppercase;
+    animation: 0.8s ease-in-out 0s 1 slideInFromBottom;
+}
+
+.nav-link-wrapper {
+    height: 24px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+    line-height: 0.75em;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+    color: #AEAEAE;
+    text-decoration: none;
+    font-weight: bold;    
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 2px solid #AEAEAE;
+}
+
+.nav-link-wrapper a:hover {
+    color: 2px solid #AEAEAE;
+}
+
+/*Portfolio styles*/
+
+.hi{
+    text-align: left;
+    padding-bottom: 1em;
+    padding-top:0.8em;
+    font-family: 'Karla', sans-serif;
+    font-size: 3em;
+    color: #777777;
+    line-height: 1.4em;
+    font-weight: 600;
+    animation:0.8s ease-in-out 0s 1 slideInFromBottom;
+}
+
+.question {
+    text-align: left;
+    padding-bottom: 1em;
+    font-family: 'Karla', sans-serif;
+    font-size: 2em;
+    color: #777777;
+    line-height: 1.4em;
+    font-weight: 600;
+    animation: 0.8s ease-in-out 0s 1 slideInFromBottom;
+}
+
+.answer {
+    text-align: right;
+    animation: 0.8s ease-in-out 0s 1 slideInFromBottom;
+    position: relative;
+    padding-bottom: 3em;
+    font-family: 'Karla', sans-serif;
+    font-size: 2.25em;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: 1.4em;
+    color: #A7D1BD;
+    padding-left: 40%;
+    transition: color 0.2s;
+}
+
+.answer a{
+    margin-left: 40%;
+    text-decoration: none;
+    color: #A7D1BD;
+    font-weight: 1000;
+}
+
+.answer a:hover {
+    color: #59B087;
+}
+
+.answer img {
+    display: flex;
+    width: 75%;
+    margin-bottom: -5em;
+    margin-left: -70%;
+}
+
+.subanswer {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    line-height: 2em;
+    font-size: 0.4em;
+    letter-spacing: 0.05em;
+    color: #AEAEAE;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0px;
+}
+
+/*Footer styles*/
+.footer {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    animation: 0.8s ease-in-out 0s 1 slideInFromBottom;
+}
+
+.footer > div {
+    margin-right: 24px; 
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+/*Not Work styles*/
+.answer-2 {
+    text-align: right;
+    animation: 0.8s ease-in-out 0s 1 slideInFromBottom;
+    position: relative;
+    padding-bottom: 200px;
+    font-family: 'Karla', sans-serif;
+    font-size: 2.25em;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: 1.4em;
+    color: #A7D1BD;
+    padding-left: 40%;
+    transition: color 0.2s;
+}
+
+.answer-2 a{
+    margin-left: 40%;
+    text-decoration: none;
+    color: #A7D1BD;
+}
+
+.answer-2 a:hover {
+    color: #59B087;
+}
+
+.answer-2 img {
+    display: flex;
+    width: 65%;
+    margin-bottom: -8em;
+    margin-left: -70%;
+}
+
+/*About Me*/
+.about-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 48px;
+    padding-bottom: 64px;
+}
+
+.right-blurb {
+    text-align: right;
+    width: 90%;
+    font-family: 'Karla', sans-serif;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 700px;
+    line-height: 1.4em;
+    color: #777777;
+    transition: color 0.2s;
+    animation: 0.8s ease-in-out 0s 1 slideInFromBottom;
+}
+
+.right-blurb span{
+    font-weight: 1000;
+}
+
+.bio-header{
+    text-align: right;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 2em;
+    color: #777777;
+    transition: color 0.2s;
+    animation: 0.8s ease-in-out 0s 1 slideInFromBottom;
+}
+
+.me img {
+    display: flex;
+    width: 95%;
+    animation: 0.8s ease-in-out 0s 1 slideInFromBottom;
+}
+
+/*Skillset styles*/
+.question-1{
+    text-align: left;
+    padding-bottom: 0.75em;
+    padding-top: 3em;
+    font-family: 'Karla', sans-serif;
+    font-size: 2em;
+    color: #777777;
+    line-height: 1.4em;
+    font-weight: 600;
+    animation: 0.8s ease-in-out 0s 1 slideInFromBottom;
+}
+.skillset {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 48px;
+    animation: 0.8s ease-in-out 0s 1 slideInFromBottom;
+    color: #777777;
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+}
+
+.skill img{
+    height: 80px;
+}
+
+.skill-header{
+    display: row;
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 0.8em;
+}
+
+.details {
+    position: relative;
+    font-size: 0.8em;
+    font-weight: 200;
+    line-height: 1.4em;
+}
+
+/* Make it Responsive */
+@media screen and (max-width: 1400px) {
+    .right-blurb {
+        font-size: 0.85em;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .answer {
+        font-size: 2em;
+    }
+
+    .answer img {
+        margin-bottom: -4.5em;
+    }
+
+    .answer-2 {
+        font-size: 2.25em;
+    }
+
+    .answer-2 img {
+        margin-bottom: -7em;
+    }
+
+    .right-blurb {
+        font-size: 0.8em;
+    }
+}
+
+ @media screen and (max-width: 1000px) {
+    .answer {
+        font-size: 1.5em;
+    }
+
+    .answer-2 {
+        font-size: 2em;
+    }
+
+    .answer-2 img{
+        margin-bottom: -6.25em;
+    }
+
+    .right-blurb {
+        font-size: 0.7em;
+        width: 100%;
+    }
+   
+    .bio-header{
+        font-size: 1em;
+    }
+
+    .left-image {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+    .subanswer {
+        font-size: 0.25em;
+    }
+    
+    .skillset {
+        display: row;
+    }
+    
+    .skill-header{
+        font-size: 0.1em;
+    }
+    
+    .details {
+        font-size: 0.5em;
+    }
+
+    .about-wrapper {
+        flex-direction: column;
+    }
+
+    .left-image {
+        margin-left: 15%;
+    }
+
+    .me img {
+        padding-bottom: 2em;
+    }
+
+    .right-blurb {
+        text-align: left;
+        width: 100%;
+    }
+    
+    .bio-header{
+        text-align: left;
+    }
+
+    .pair {
+        flex-direction: column-reverse;
+    }
+   
+    .pair-1 {
+        flex-direction: column-reverse;
+    }
+   
+
+}
+
