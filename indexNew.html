@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Julia Sim</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Karma|Karla|Nunito+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/zkg2ejc.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xkf2fvr.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/png" href="images/FavIcon.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/Logo.png">
+                    </a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="nav-link-wrapper">
+                    <a href="index.html"> Work</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="blog.html"> Blog</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="about.html"> About</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="./JuliaSimResume.pdf" target="_blank">Resume</a>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div id="cBlob"></div>
+        <div id="cClick"></div>
+
+        <content>
+
+            <div id="title">
+                <h1 class="blobber ac">Julia is a product designer</h1>
+                <h1 class="blobber ac">Julia is a product designer</h1>
+            </div>
+
+        </content>
+
+        <script>
+            // define lettering classes
+            $(".ac, .ac-d").lettering();
+            $(".al, .ac-l").lettering("lines");
+            $(".aw, .aw-l").lettering("words");
+
+            // check for lettering.js whitespaces
+            $("span[class^='char']").each(function () {
+                var str = $(this).text();
+
+                if (str === null || str.match(/^ *$/) !== null) {
+                    $(this).empty();
+                }
+            });
+
+            $("content").show(0).css({
+                'display': 'flex',
+                'justify-content': 'center',
+                'align-items': 'center'
+            });
+
+            // define elements for blob thingy
+            const CURSOR = $("#cBlob");
+            const CLICKER = $("#cClick");
+            const BLOBBER = $(".blobber");
+
+            // set blob position
+            $(document).mousemove(function (e) {
+                CURSOR.css({
+                    top: e.pageY - CURSOR.height() / 2 + "px",
+                    left: e.pageX - CURSOR.width() / 2 + "px"
+                });
+            });
+
+            // functions for cursor
+            const initCursor = () => CURSOR.css("transform", "scale(1)");
+            const setCursorHover = () => CURSOR.css("transform", "scale(2)");
+            const removeCursorHover = () => CURSOR.css("transform", "scale(1)");
+            const setCursorClick = e => {
+                CLICKER.css({
+                    top: e.pageY - CLICKER.height() / 2 + "px",
+                    left: e.pageX - CLICKER.width() / 2 + "px"
+                });
+                CLICKER.addClass("clicked");
+            };
+
+            setTimeout(function () {
+                initCursor();
+            }, 1000)
+
+            // non clickable elements
+            BLOBBER.each(function () {
+                $(this).on({
+                    mouseover: setCursorHover,
+                    mouseleave: removeCursorHover
+                });
+
+                if ($(this).hasClass("link")) {
+                    $(this)
+                        .click(setCursorClick)
+                        .click(function () {
+                            var href = $(this).data('href');
+
+                            setTimeout(function () {
+                                toggleNav();
+
+                                //window.location.href = href;
+                                var result = confirm("the " + href + " page will appear here");
+
+                                if (result) {
+                                    window.location.reload(false);
+                                }
+                            }, 800);
+                        });
+                }
+            });
+
+            $(".nav__icon").click(function () {
+                toggleNav();
+            });
+        </script>
+
+
+
+        <div>
+            <div class="question">
+                curious as to what she's been up to?
+            </div>
+
+
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
+                <div class="answer">
+                    <a href="lbt.html" target="_blank">
+                        <div class="images">
+                            <img src="images/LBT.png">
+                        </div>
+
+                        <div class="answer-wrapper">
+                            <div class="answer-title">
+                                transforming the LCBO's printing process
+                            </div>
+                            <div class="subanswer"> UI/UX Design + Product Thinking</div>
+                        </div>
+
+                    </a>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
+                <div class="answer">
+                    <a href="currencyCalculator.html" target="_blank">
+                        <div class="images">
+                            <img src="images/CurrencyCalculator.png">
+                        </div>
+
+                        <div class="answer-wrapper">
+                            <div class="answer-title">
+                                redesigning a business solutions tool
+                            </div>
+                            <div class="subanswer"> User Research + Data Visualization</div>
+                        </div>
+
+                    </a>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
+                <div class="answer">
+                    <a href="nolongertheirs.html" target="_blank">
+                        <div class="images">
+                            <img src="images/nlt.png">
+                        </div>
+
+                        <div class="answer-wrapper">
+                            <div class="answer-title">
+                                elevating the thrifting experience
+                            </div>
+                            <div class="subanswer">User Research + Prototyping</div>
+                        </div>
+
+                    </a>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
+                <div class="question-1">
+                    curious as to how she can help you?
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
+                <div class="skills-new">
+                    <img src="images/visual.png">
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
+                <div class="skills-new1">
+                    <img src="images/product.png">
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
+                <div class="skills-new1">
+                    <img src="images/interaction.png">
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
+                <div class="skills-new1">
+                    <img src="images/dev.png">
+                </div>
+            </div>
+
+            <div class="question-3">
+                <div class="still">
+                    still curious?
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="nav-link-wrapper">
+                    <a href="./JuliaSimResume.pdf" target="_blank">Resume</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="https://ca.linkedin.com/in/julia-sim-433955191" target="_blank">LinkedIn</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="mailto:j6sim@uwaterloo.ca" target="_blank">Email</a>
+                </div>
+            </div>
+            <div class="copyright">
+                designed and developed by Julia Sim 2020
+            </div>
+
+
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
