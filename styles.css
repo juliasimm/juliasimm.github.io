@@ -53,10 +53,12 @@ body {
 
 .right-side {
     display: flex; 
+    
 }
 
 .logo img {
     height: 40px;
+    
 }
 
 .nav-wrapper > .right-side > div {
@@ -64,17 +66,19 @@ body {
     font-size: 1em;
     text-transform: lowercase;
     animation: 0.8s ease-in-out 0s 1 slideInFromBottom;
+    background-color: #f8f8f8;
 }
 
 .nav-link-wrapper {
     height: 24px;
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.5s;
+    background-color: #f8f8f8;
 }
 
 .nav-link-wrapper a {
     line-height: 0.75em;
-    font-size: 0.9em;
+    font-size: 1em;
     letter-spacing: 0.05em;
     color: #000000;
     text-decoration: none;
